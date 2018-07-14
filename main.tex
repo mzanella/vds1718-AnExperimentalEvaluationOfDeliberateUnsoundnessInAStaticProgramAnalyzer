@@ -1,0 +1,65 @@
+\documentclass[25pt]{beamer}
+\usecolortheme[dark]{solarized/beamercolorthemesolarizedUniPD}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{siunitx}
+
+\usepackage{inconsolata}
+
+\usepackage{color}
+\definecolor{amaranthkeywords}{rgb}{0.9, 0.17, 0.31}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+\definecolor{brightturquoise}{rgb}{0.03, 0.91, 0.87}
+
+
+\lstset{language=[Sharp]C,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  numbers=left,
+  frame = single,
+  escapeinside={(*@}{@*)},
+  commentstyle=\color{greencomments},
+  keywordstyle=\color{amaranthkeywords},
+  stringstyle=\color{redstrings},
+  otherkeywords={>,<,-,!,=,~,where},
+  morekeywords={>,<,-,!,=,~,where},
+  keywordstyle=\color{amaranthkeywords},
+  emph={int,T,ContractInvariantMethod},
+  emphstyle={\color{brightturquoise}},
+  basicstyle=\small\ttfamily
+}
+
+\subtitle{\textit{\small{\\Maria Christakis, Peter Müller, and Valentin Wüstholz
+\\Department of Computer Science ETH Zurich, Switzerland}}}
+
+\title{An Experimental Evaluation of Deliberate Unsoundness in a Static Program
+Analyzer}
+
+\author{Marco Zanella\\1155185}
+\date{20th July 2018}
+\institute{Verifica del software}
+
+\begin{document}
+\graphicspath{{res/img/}}
+
+\newcommand{\turnOffNumbers}{true}
+
+\fontsize{15pt}{7.2}\selectfont
+
+\begin{frame}[plain,noframenumbering]
+  \titlepage
+\end{frame}
+
+\let\turnOffNumbers\empty
+
+\input{res/listOfSections}
+
+\end{document}

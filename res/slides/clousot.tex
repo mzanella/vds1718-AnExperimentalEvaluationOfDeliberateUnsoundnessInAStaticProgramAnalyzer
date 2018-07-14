@@ -1,0 +1,57 @@
+\begin{frame}{Clousot}
+
+Clousot is a tool to statically check CodeContracts
+
+\vspace*{1cm}
+
+Permits a modular analysis of methods based on abstract intrpretation
+\begin{itemize}
+  \item For each method analyzed \emph{assumes} the preconditions and
+  \emph{asserts} postconditions
+
+  \item For each method call \emph{asserts} the preconditions and
+  \emph{assumes} postconditions
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{CodeContracts}
+
+\begin{textblock*}{1cm}(9.8cm, 2cm)
+    \includegraphics{codecontractslogo}
+\end{textblock*}
+
+Specification of contracts
+\begin{itemize}
+  \item compiler independent
+  \item language independent (for .NET languages)
+\end{itemize}
+
+\vspace*{1cm}
+
+Price for programmers very low because they are the form of a call to a static
+library method
+
+\end{frame}
+
+
+\begin{frame}[fragile]{CodeContract - Example\\Preconditions}
+\vspace*{-0.4cm}
+\lstinputlisting{res/code/preconditions.cs}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{CodeContract - Example\\Postconditions and Return value}
+\vspace*{-0.3cm}
+\lstinputlisting{res/code/postconditions.cs}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{CodeContract - Example\\Object invariant}
+\vspace*{-0.5cm}
+\lstinputlisting{res/code/objectinvariant.cs}
+\end{frame}
