@@ -1,0 +1,68 @@
+%----------START integral-type arithmetic----------
+
+\begin{frame}{MLP-Integral-Type Arithmetic}
+
+\vspace*{-0.4cm}
+
+Clousot ignores overflow in integral-type arithmetic operations and conversions
+
+\vspace*{0.6cm}
+
+This assumption reduce the number of false positives and are treated as
+unbounded
+
+\vspace*{0.6cm}
+
+This is not true with \texttt{checked} expression
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Integral-Type Arithmetic - 1}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/integraltypearithmetic1.cs}}
+\only<2->{\lstinputlisting{res/code/integraltypearithmetic1assumed.cs}}
+\end{frame}
+
+
+\begin{frame}[fragile]{Integral-Type Arithmetic - 2}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/integraltypearithmetic2.cs}}
+\only<2->{\lstinputlisting{res/code/integraltypearithmetic2assumed.cs}}
+\end{frame}
+
+%----------END integral-type arithmetic----------
+%----------START exceptional control flow----------
+
+\begin{frame}{MLP-Exceptional Control Flow}
+
+\vspace*{-0.4cm}
+
+Clousot ignores \texttt{catch} blocks 
+
+\vspace*{0.6cm}
+
+It assumes that the code in a finally block is executed only after a
+non-exceptional exit of the \texttt{try} block
+
+\vspace*{0.6cm}
+
+This avoid losing efficiency and precision
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Exceptional Control Flow - 1}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/exceptionalcontrolflow1.cs}}
+\only<2->{\lstinputlisting{res/code/exceptionalcontrolflow1assumed.cs}}
+\end{frame}
+
+
+\begin{frame}[fragile]{Exceptional Control Flow - 2}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/exceptionalcontrolflow2.cs}}
+\only<2->{\lstinputlisting{res/code/exceptionalcontrolflow2assumed.cs}}
+\end{frame}
+
+%----------END exceptional control flow----------

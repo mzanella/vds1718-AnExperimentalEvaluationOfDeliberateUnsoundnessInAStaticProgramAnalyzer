@@ -1,0 +1,26 @@
+\begin{frame}{SCM-Static fields \& Main}
+
+\vspace*{-0.4cm}
+
+Clousot assumes that static fields of reference types contain non-null values
+
+\vspace*{0.6cm}
+
+Clousot assumes that the string array passed to a main method and its elements
+are non-null for all invocations of the method
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Static Fields}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/staticfield.cs}}
+\only<2->{\lstinputlisting{res/code/staticfieldassumed.cs}}
+\end{frame}
+
+
+\begin{frame}[fragile]{Main methods}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/mainmethod.cs}}
+\only<2->{\lstinputlisting{res/code/mainmethodassumed.cs}}
+\end{frame}

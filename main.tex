@@ -7,8 +7,9 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{siunitx}
-
+\usepackage{soul}
 \usepackage{inconsolata}
+\usepackage{booktabs}
 
 \usepackage{color}
 \definecolor{amaranthkeywords}{rgb}{0.9, 0.17, 0.31}
@@ -25,16 +26,30 @@
   breakatwhitespace=true,
   numbers=left,
   frame = single,
-  escapeinside={(*@}{@*)},
+  escapeinside={(@*}{@*)},
   commentstyle=\color{greencomments},
   keywordstyle=\color{amaranthkeywords},
   stringstyle=\color{redstrings},
   otherkeywords={>,<,-,!,=,~,where},
   morekeywords={>,<,-,!,=,~,where},
   keywordstyle=\color{amaranthkeywords},
-  emph={int,T,ContractInvariantMethod},
+  emph={int,T,ContractInvariantMethod, C, D, Pure},
   emphstyle={\color{brightturquoise}},
   basicstyle=\small\ttfamily
+}
+
+\makeatletter
+\let\HL\hl
+\renewcommand\hl{%
+  \let\set@color\beamerorig@set@color
+  \let\reset@color\beamerorig@reset@color
+  \HL}
+\makeatother
+
+\newcommand{\hlc}[2][yellow]{{\sethlcolor{#1}\hl{#2}}}
+
+\newcommand{\hc}[1]{
+\small\ttfamily\textcolor{black}{\hlc[orange]{#1}}
 }
 
 \subtitle{\textit{\small{\\Maria Christakis, Peter Müller, and Valentin Wüstholz

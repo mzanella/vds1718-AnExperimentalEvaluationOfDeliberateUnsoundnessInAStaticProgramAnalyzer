@@ -1,0 +1,45 @@
+\begin{frame}{Unsoundness in Clousot - 1}
+
+\vspace*{-0.4cm}
+
+Develop instrumentation to automatically annotate the analyzed code with
+\texttt{assumed}* statements
+
+\vspace*{0.6cm}
+
+\texttt{assumed P} means that static analyzer \emph{unsoundly} assume property P
+
+\vspace*{0.6cm}
+
+This explicit assumption can
+\begin{itemize}
+  \item precisely capture the unsound assumption
+  \item over-approximate
+  \item under-approximate
+
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Unsoundness in Clousot - 2}
+
+\vspace*{-0.4cm}
+
+\begin{itemize}
+  \item \textbf{Heap Properties} (HP)\\[0.1cm]
+        Object invariants, Aliasing, Write effects, Purity
+
+  \vfill
+
+  \item \textbf{Method-Local Properties} (MLP)\\[0.1cm]
+        Integral type, Exceptional control flow
+
+  \vfill
+
+  \item \textbf{Static Class Member} (SCM)\\[0.1cm]
+        Static fields, Main methods
+\end{itemize}
+
+\end{frame}

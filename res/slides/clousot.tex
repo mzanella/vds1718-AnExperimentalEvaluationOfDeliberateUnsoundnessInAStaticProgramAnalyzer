@@ -4,7 +4,7 @@ Clousot is a tool to statically check CodeContracts
 
 \vspace*{1cm}
 
-Permits a modular analysis of methods based on abstract intrpretation
+Permits a modular analysis of methods based on abstract interpretation
 \begin{itemize}
   \item For each method analyzed \emph{assumes} the preconditions and
   \emph{asserts} postconditions
@@ -25,7 +25,7 @@ Permits a modular analysis of methods based on abstract intrpretation
 
 Specification of contracts
 \begin{itemize}
-  \item compiler independent
+  \item no compiler modification needed
   \item language independent (for .NET languages)
 \end{itemize}
 
@@ -54,4 +54,34 @@ library method
 \begin{frame}[fragile]{CodeContract - Example\\Object invariant}
 \vspace*{-0.5cm}
 \lstinputlisting{res/code/objectinvariant.cs}
+\end{frame}
+
+
+
+\begin{frame}{Clousot - Analysis}
+\vspace*{-1cm}
+\begin{itemize}
+  \item NonNull analysis
+
+  \vspace*{0.3cm}
+
+  \item Numerical analysis
+  \begin{itemize}
+    \item DisIntervals
+    \item Pentagons
+    \item Linear Equalities
+    \item Subpolyedra
+  \end{itemize}
+
+  \vspace*{0.3cm}
+
+  \item Floating points precision mismatches
+
+\end{itemize}
+
+\vspace*{0.8cm}
+
+Abstract domains are ordered in a tree structure and information could be
+pulled and pushed
+
 \end{frame}
