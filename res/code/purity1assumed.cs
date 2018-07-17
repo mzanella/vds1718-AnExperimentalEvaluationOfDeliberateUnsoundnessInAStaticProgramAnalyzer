@@ -1,9 +1,9 @@
-class C{
+class C {
     void M() {
         var r = Random();
-        *assumed r == Random();*
+       (@*\hc{assumed r == Random();} @*)
         assert r == Random();
-        *assumed r == Random();*
+       (@*\hc{assumed r == Random();} @*)
     }
 
     [Pure]

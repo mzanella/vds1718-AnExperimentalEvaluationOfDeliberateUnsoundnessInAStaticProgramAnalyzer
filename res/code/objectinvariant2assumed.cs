@@ -9,7 +9,7 @@ class Sub : Super {
     Sub() {b=false;}
     void M() {
         N();
-        *assumed invariant(this, typeof(Sub));*
+       (@*\hc{assumed invariant(this, typeof(Sub));} @*)
         assert !b;
     }
 }

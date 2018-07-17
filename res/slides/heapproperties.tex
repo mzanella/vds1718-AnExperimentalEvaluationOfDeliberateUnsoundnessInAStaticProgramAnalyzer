@@ -1,0 +1,105 @@
+%----------START object invariant----------
+
+\begin{frame}{HP - Object Invariant}
+
+\vspace*{-0.4cm}
+
+Clusot checks object invariant of the receiver at the end of a
+method/constructor and assume it in the prestate of a call
+
+\vfill
+
+It makes 2 unsound assumptions
+\begin{enumerate}
+\item assumes invariants of the receiver object in the pre-state of an
+instance method
+\item assumes the invariant of the receiver after a call to an
+inhered method
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{HP - Object Invariant - 1}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/objectinvariant1.cs}}
+\only<2->{\lstinputlisting{res/code/objectinvariant1assumed.cs}}
+\end{frame}
+
+
+\begin{frame}[fragile]{HP - Object Invariant - 2}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/objectinvariant2.cs}}
+\only<2->{\lstinputlisting{res/code/objectinvariant2assumed.cs}}
+\end{frame}
+
+%----------END object invariant----------
+%----------START aliasing----------
+
+\begin{frame}{HP - Aliasing}
+
+\vspace*{-0.4cm}
+
+Clusot unsoundly assumes that heap location not explicitly aliased in the code
+analyzed are non-aliasing
+
+\vfill
+
+\begin{textblock*}{1cm}(8.2cm, 4.5cm)
+    \includegraphics[scale=0.25]{heapgraphexample}
+\end{textblock*}
+
+\textbf{Heap graph abstraction}
+\lstinputlisting{res/code/heapgraphabstraction.cs}
+
+\end{frame}
+
+\begin{frame}[fragile]{HP - Aliasing}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/aliasing.cs}}
+\only<2->{\lstinputlisting{res/code/aliasingassumed.cs}}
+\end{frame}
+
+%----------END aliasing----------
+%----------START write effect----------
+
+\begin{frame}{HP - Write Effect}
+
+\vspace*{-0.4cm}
+
+Clusot unsoundly assumes ...
+
+\end{frame}
+
+\begin{frame}[fragile]{HP - Write Effect}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/writeeffect.cs}}
+\only<2->{\lstinputlisting{res/code/writeeffectassumed.cs}}
+\end{frame}
+
+%----------END write effect----------
+%----------START purity----------
+
+\begin{frame}{HP - Purity}
+
+\vspace*{-0.4cm}
+
+Clusot unsoundly assumes ...
+
+\end{frame}
+
+
+\begin{frame}[fragile]{HP - Purity - 1}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/purity1.cs}}
+\only<2->{\lstinputlisting{res/code/purity1assumed.cs}}
+\end{frame}
+
+
+\begin{frame}[fragile]{HP - Purity - 2}
+\vspace*{-0.4cm}
+\only<1>{\lstinputlisting{res/code/purity2.cs}}
+\only<2->{\lstinputlisting{res/code/purity2assumed.cs}}
+\end{frame}
+
+%----------END purity----------

@@ -4,7 +4,7 @@ class C {
     var b = new int [1];
     a = b;
     N();
-    *assumed b == null || !writtenObjects().Contains(b));*
+   (@*\hc{assumed b==null || !writtenObjects().Contains(b);} @*)
     assert b[0] == 0;
   }
 
