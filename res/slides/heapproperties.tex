@@ -20,14 +20,14 @@ inhered method
 \end{frame}
 
 
-\begin{frame}[fragile]{HP - Object Invariant - 1}
+\begin{frame}[fragile]{Object Invariant - 1}
 \vspace*{-0.4cm}
 \only<1>{\lstinputlisting{res/code/objectinvariant1.cs}}
 \only<2->{\lstinputlisting{res/code/objectinvariant1assumed.cs}}
 \end{frame}
 
 
-\begin{frame}[fragile]{HP - Object Invariant - 2}
+\begin{frame}[fragile]{Object Invariant - 2}
 \vspace*{-0.4cm}
 \only<1>{\lstinputlisting{res/code/objectinvariant2.cs}}
 \only<2->{\lstinputlisting{res/code/objectinvariant2assumed.cs}}
@@ -54,7 +54,7 @@ analyzed are non-aliasing
 
 \end{frame}
 
-\begin{frame}[fragile]{HP - Aliasing}
+\begin{frame}[fragile]{Aliasing}
 \vspace*{-0.4cm}
 \only<1>{\lstinputlisting{res/code/aliasing.cs}}
 \only<2->{\lstinputlisting{res/code/aliasingassumed.cs}}
@@ -65,13 +65,23 @@ analyzed are non-aliasing
 
 \begin{frame}{HP - Write Effect}
 
-\vspace*{-0.4cm}
+\vspace*{-0.6cm}
 
-Clusot unsoundly assumes ...
+Clousot uses unsound heuristics to determine the set of heap locations that are
+modified by a method call
+
+\vspace*{0.6cm}
+
+It assumes that all other remain unmodified
+
+\vspace*{0.6cm}
+
+This assumption may be not verified in case of aliasing and call to methods
+that perform side effects
 
 \end{frame}
 
-\begin{frame}[fragile]{HP - Write Effect}
+\begin{frame}[fragile]{Write Effect}
 \vspace*{-0.4cm}
 \only<1>{\lstinputlisting{res/code/writeeffect.cs}}
 \only<2->{\lstinputlisting{res/code/writeeffectassumed.cs}}
@@ -84,19 +94,30 @@ Clusot unsoundly assumes ...
 
 \vspace*{-0.4cm}
 
-Clusot unsoundly assumes ...
+Programmers can annotate with \texttt{[Pure]} methods that not make any visible
+state changes but \emph{no checks are performed on method purity}
+
+\vspace*{0.6cm}
+
+Clusot unsoundly assumes
+\begin{enumerate}
+  \item that all method annotated with \texttt{[Pure]} follow the
+  specification (as property getters)
+  \item that all pure methods deterministically return the same value when
+  called in states that are equivalent
+\end{enumerate}
 
 \end{frame}
 
 
-\begin{frame}[fragile]{HP - Purity - 1}
+\begin{frame}[fragile]{Purity - 1}
 \vspace*{-0.4cm}
 \only<1>{\lstinputlisting{res/code/purity1.cs}}
 \only<2->{\lstinputlisting{res/code/purity1assumed.cs}}
 \end{frame}
 
 
-\begin{frame}[fragile]{HP - Purity - 2}
+\begin{frame}[fragile]{Purity - 2}
 \vspace*{-0.4cm}
 \only<1>{\lstinputlisting{res/code/purity2.cs}}
 \only<2->{\lstinputlisting{res/code/purity2assumed.cs}}

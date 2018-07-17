@@ -1,11 +1,11 @@
-bool b = false ;
-*$noException$ = false;*
-try {
-    if (*)
-        throw new Exception();
-    b = true ;
-   (@*\hc{$noException$ = true;} @*)
-} finally {
-   (@*\hc{assumed $noException$;} @*)
-    assert b;
-}
+  bool b = false ;
+ (@*\hc{\$noException\$ = false;} @*)
+  try {
+      if (*)
+          throw new Exception();
+      b = true ;
+     (@*\hc{\$noException\$ = true;} @*)
+  } finally {
+     (@*\hc{assumed \$noException\$;} @*)
+      assert b;
+  }
