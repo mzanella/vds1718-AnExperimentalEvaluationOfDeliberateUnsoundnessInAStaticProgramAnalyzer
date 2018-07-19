@@ -1,5 +1,5 @@
-static int [] a ;
-
-void M () {
-    assert a != null ;
-}
+  static int[] a;
+  
+  void M() {
+      assert a != null;
+  }

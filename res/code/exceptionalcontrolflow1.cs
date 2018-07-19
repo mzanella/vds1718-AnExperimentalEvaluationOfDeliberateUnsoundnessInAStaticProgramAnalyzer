@@ -1,5 +1,5 @@
-try {
-    throw new Exception();
-} catch(Exception) {
-    assert false ;
-}
+  try {
+      throw new Exception();
+  } catch(Exception) {
+      assert false ;
+  }
